@@ -6,12 +6,16 @@ import structures.model.*;
 
 public class Controller 
 {
+	private LinkedList<Customer> customerQueue;
+	private Stack<Carpet> carpetStack;
+	
 	public void start()
 	{	
-		Customer customer = new Customer(0);
-		Customer customer2 = new Customer(1);
-		Queue<Customer> customerQueue;
+		carpetStack = new Stack<Carpet>();
 		customerQueue = new LinkedList<Customer>();
+		
+		Customer customer = new Customer(1);
+		Customer customer2 = new Customer(2);
 		
 		customerQueue.add(customer);
 		customerQueue.add(customer2);
@@ -19,9 +23,6 @@ public class Controller
 		
 		Carpet carpet = new Carpet("Shag");
 		Carpet carpet1 = new Carpet("Beige");
-		
-		Stack<Carpet> carpetStack;
-		carpetStack = new Stack<Carpet>();
 		
 		carpetStack.push(carpet);
 		carpetStack.push(carpet1);
